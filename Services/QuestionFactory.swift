@@ -1,5 +1,4 @@
 import Foundation
-import Foundation
 
 final class QuestionFactory: QuestionFactoryProtocol {
     private let questions: [QuizQuestion] = [
@@ -42,7 +41,7 @@ final class QuestionFactory: QuestionFactoryProtocol {
         QuizQuestion(
             image: "Vivarium",
             text: "Рейтинг этого фильма больше чем 6?",
-            correctAnswer: false)]
+            correctAnswer: false)].shuffled()
     
     private weak var delegate: QuestionFactoryDelegate?
     
